@@ -6,7 +6,7 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 interface HoroscopeApi {
-    @POST(".")
+    @POST(".")// el . consume la url directa
     suspend fun getHoroscope(
         @Query("sign") sign:String,
         @Query("day") day:String
