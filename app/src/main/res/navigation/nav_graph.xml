@@ -18,10 +18,10 @@
         tools:layout="@layout/fragment_information" />
 
     <fragment
-        android:id="@+id/compatibilityFragment"
-        android:name="com.borja.android.horoscopapp.ui.compatibility.CompatibilityFragment"
+        android:id="@+id/luckyFragment"
+        android:name="com.borja.android.horoscopapp.ui.lucky.LuckyFragment"
         android:label="fragment_compatibility"
-        tools:layout="@layout/fragment_compatibility" />
+        tools:layout="@layout/fragment_lucky" />
 
 
 </navigation>
