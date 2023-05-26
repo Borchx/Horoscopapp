@@ -1,5 +1,6 @@
 package com.borja.android.horoscopapp.ui.list
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.borja.android.horoscopapp.R
 import com.borja.android.horoscopapp.databinding.FragmentListBinding
+import com.borja.android.horoscopapp.ui.detail.DetailActivity
 
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,16 +23,22 @@ class ListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnAries.setOnClickListener {
-            //abrir detalle
+            openDetail()
         }
 
         binding.btnCapricornio.setOnClickListener {
-            //abrir detalle
+            openDetail()
         }
         binding.btnLeo.setOnClickListener {
-            //abrir detalle
+            openDetail()
         }
     }
+
+    private fun openDetail(){
+        //val intent = Intent(requireContext(),DetailActivity::class.java)
+        //startActivity(intent)
+        startActivity(DetailActivity.create(requireContext()))
+        }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
