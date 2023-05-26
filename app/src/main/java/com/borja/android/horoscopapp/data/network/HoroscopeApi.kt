@@ -2,13 +2,17 @@ package com.borja.android.horoscopapp.data.network
 
 import com.borja.android.horoscopapp.data.network.model.HoroscopeResponse
 import retrofit2.Response
-import retrofit2.http.POST
+import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface HoroscopeApi {
-    @POST(".")// el . consume la url directa
+    //@POST(".")// el . consume la url directa
+
+    @GET("/{sign}/")
     suspend fun getHoroscope(
-        @Query("sign") sign:String,
-        @Query("day") day:String
+        @Path("sign") sign:String,
+        @Query("date") date:String,
+        @Query("lang") lang:String
     ): Response<HoroscopeResponse>
 }
