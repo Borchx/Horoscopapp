@@ -53,7 +53,7 @@ class DetailActivity : AppCompatActivity() {
                             // mostrar info
                             binding.pbLoading.isVisible = false
                             runOnUiThread{
-                                Toast.makeText(this@DetailActivity,"Ha funcionado", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@DetailActivity,uiState.horoscopeModel.horoscope, Toast.LENGTH_SHORT).show()
                             }
 
                         }
