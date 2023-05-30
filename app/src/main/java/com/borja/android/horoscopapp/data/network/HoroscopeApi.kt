@@ -10,7 +10,7 @@ interface HoroscopeApi {
     //@POST(".")// el . consume la url directa
 
     @GET("/{sign}/")
-    suspend fun getHoroscope(
+     suspend fun getHoroscope(
         @Path("sign") sign:String,
         @Query("date") date:String,
         @Query("lang") lang:String
