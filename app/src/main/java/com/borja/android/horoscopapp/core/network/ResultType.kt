@@ -8,5 +8,5 @@ sealed class ResultType<T> {
     data class Success<T>(val data: T?) : ResultType<T>()
 
     //val exampleError = ResultType.Error<HoroscopeResponse>("ERROR en la APP")
-    data class Error<T>(val msg:String?) : ResultType<T>()
+    data class Error<T>(val errorType: ErrorType) : ResultType<T>()
 }
